@@ -7,7 +7,7 @@ public class Patrol : MonoBehaviour
     public Transform[] waypoints;
     public int speed;
 
-    private int waypointIndex;
+    public int waypointIndex;
     private float distance;
     // Start is called before the first frame update
     void Start()

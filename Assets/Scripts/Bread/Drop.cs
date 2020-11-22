@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
+    public Patrol patrol;
     public GameObject bread;
     BoxCollider collider;
     public Rigidbody rb;
@@ -11,7 +12,7 @@ public class Drop : MonoBehaviour
 
     private float dropFowardForce;
     private float dropUpwardForce;
-    private int dropPoint;
+    public int dropPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +20,16 @@ public class Drop : MonoBehaviour
         collider = bread.GetComponent<BoxCollider>();
         collider.isTrigger = true;
         rb.isKinematic = true;
+        dropFowardForce = Random.Range(2f,7f);
+        dropUpwardForce = Random.Range(2f,7f);
+        dropPoint = (int)Random.Range(1f, 12f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        //if (Input.GetKeyDown(KeyCode.R))
+        if (patrol.waypointIndex == dropPoint && bread.transform.parent != null)
         {
             bread.transform.parent = null;
             collider.isTrigger = false;
