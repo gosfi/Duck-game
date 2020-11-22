@@ -1003,8 +1003,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrol: {fileID: 592420389}
-  bread: {fileID: 965406090606046343, guid: fd924478f8c82314098ce87eccbabfec, type: 3}
-  rb: {fileID: 965406090606046336, guid: fd924478f8c82314098ce87eccbabfec, type: 3}
+  bread: {fileID: 848547358}
+  rb: {fileID: 848547359}
   npc: {fileID: 592420388}
   dropFowardForce: 0
   dropUpwardForce: 0
@@ -1180,6 +1180,18 @@ PrefabInstance:
 --- !u!4 &677111208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 965406090606046340, guid: fd924478f8c82314098ce87eccbabfec,
+    type: 3}
+  m_PrefabInstance: {fileID: 677111207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &848547358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 965406090606046343, guid: fd924478f8c82314098ce87eccbabfec,
+    type: 3}
+  m_PrefabInstance: {fileID: 677111207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &848547359 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 965406090606046336, guid: fd924478f8c82314098ce87eccbabfec,
     type: 3}
   m_PrefabInstance: {fileID: 677111207}
   m_PrefabAsset: {fileID: 0}
