@@ -6,17 +6,19 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerControls : MonoBehaviour
 {
+    #region Variables
     [Header("constant variables")]
     const float normalMoveSpeed = 10f;
     [Header("hidden variable")]
     Vector2 i_movement;
+    AudioSource source;
     bool turningLeft, turningRight, isSoundPlaying;
     [Header("Variable showing in the inspector")]
     [SerializeField] float moveSpeed = normalMoveSpeed;
     [SerializeField] float turnSpeed = 10f;
     [SerializeField] GameObject obj;
-    [SerializeField] AudioSource source;
     [SerializeField] AudioClip AttackSound;
+    #endregion
 
     #region UnityEvents
     public void OnMove(CallbackContext context)
@@ -48,6 +50,11 @@ public class PlayerControls : MonoBehaviour
     #endregion
 
     #region GameLogic
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
     void Update()
     {
         //always updating
