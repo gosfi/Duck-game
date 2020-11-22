@@ -19,7 +19,12 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        distance = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
+        if (distance < 1)
+        {
+            IncreaseIndex();
+        }
+        Patrolling();
     }
 
     void Patrolling()
@@ -30,7 +35,7 @@ public class Patrol : MonoBehaviour
     void IncreaseIndex()
     {
         waypointIndex++;
-        if(waypointIndex >= waypoints.Length)
+        if (waypointIndex >= waypoints.Length)
         {
             waypointIndex = 0;
         }
