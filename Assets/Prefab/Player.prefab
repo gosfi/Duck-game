@@ -184,6 +184,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e82d6336-ef5b-4ada-867e-ef8a4afd784f
     m_ActionName: PlayerControls/Turn Right[/XInputControllerWindows/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3978579625617823906}
+        m_MethodName: OnScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d3904cd5-cfae-4ca2-92ca-7304eeb65fa2
+    m_ActionName: PlayerControls/Increase score[/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerControls
@@ -202,10 +217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  turnSpeed: 50
+  turnSpeed: 100
   obj: {fileID: 9000304619336126602}
-  source: {fileID: 6554484924806712245}
   AttackSound: {fileID: 8300000, guid: e4ac0d2566fc58a48abb709d3cb3c643, type: 3}
+  score: 0
 --- !u!54 &3978579625617823908
 Rigidbody:
   m_ObjectHideFlags: 0

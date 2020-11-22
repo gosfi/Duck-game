@@ -12,12 +12,13 @@ public class PlayerControls : MonoBehaviour
     [Header("hidden variable")]
     Vector2 i_movement;
     AudioSource source;
-    bool turningLeft, turningRight, isSoundPlaying;
+    bool turningLeft, turningRight, isSoundPlaying, canAttack;
     [Header("Variable showing in the inspector")]
     [SerializeField] float moveSpeed = normalMoveSpeed;
-    [SerializeField] float turnSpeed = 10f;
+    [SerializeField] float turnSpeed = 50f;
     [SerializeField] GameObject obj;
     [SerializeField] AudioClip AttackSound;
+    public int score;
     #endregion
 
     #region UnityEvents
@@ -38,14 +39,7 @@ public class PlayerControls : MonoBehaviour
 
     public void OnAttack(CallbackContext context)
     {
-        if (context.action.triggered)
-        {
-            Attack();
-        }
-        else
-        {
-            obj.SetActive(false);
-        }
+        canAttack = context.action.triggered;
     }
     #endregion
 
@@ -55,10 +49,16 @@ public class PlayerControls : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
     }
+
+    private void OnEnable()
+    {
+        transform.position = new Vector3(0, 0.75f, 0);
+    }
     void Update()
     {
         //always updating
         Move();
+        Attack();
         //can't turn left and right at the same time
         if (turningLeft)
         {
@@ -87,13 +87,25 @@ public class PlayerControls : MonoBehaviour
     }
     private void Attack()
     {
-        obj.SetActive(true);
-        if (isSoundPlaying == false)
+        if (canAttack)
         {
-            source.clip = AttackSound;
-            StartCoroutine("PlayCoinCoinSound");
+            obj.SetActive(true);
+            if (isSoundPlaying == false)
+            {
+                source.clip = AttackSound;
+                StartCoroutine("PlayCoinCoinSound");
+            }
         }
+        else
+        {
+            obj.SetActive(false);
+        }
+    }
 
+    public void IncreaseNumberOfBreadEaten()
+    {
+        score++;
+        Debug.Log(score);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -104,14 +116,13 @@ public class PlayerControls : MonoBehaviour
             StartCoroutine("SlowPlayer");
         }
     }
-
+    #region Couroutines
     private IEnumerator SlowPlayer()
     {
         moveSpeed /= 2;
         yield return new WaitForSeconds(2);
         moveSpeed = normalMoveSpeed;
     }
-
     private IEnumerator PlayCoinCoinSound()
     {
         isSoundPlaying = true;
@@ -119,5 +130,6 @@ public class PlayerControls : MonoBehaviour
         yield return new WaitForSeconds(AttackSound.length);
         isSoundPlaying = false;
     }
+    #endregion
     #endregion
 }
