@@ -101,13 +101,6 @@ public class PlayerControls : MonoBehaviour
             obj.SetActive(false);
         }
     }
-
-    public void IncreaseNumberOfBreadEaten()
-    {
-        score++;
-        Debug.Log(score);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
