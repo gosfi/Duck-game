@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
     int scoreP1, scorep2;
+    public TextMeshProUGUI p1Text, p2Text;
 
     private void Start()
     {
@@ -20,5 +22,10 @@ public class GameController : MonoBehaviour
     public void AddScorePlayer2()
     {
         scorep2++;
+    }
+
+    public void EndGame()
+    {
+
     }
 }
