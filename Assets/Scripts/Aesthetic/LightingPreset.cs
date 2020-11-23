@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightingPreset : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+[System.Serializable]
+[CreateAssetMenu(fileName = "Lighting prefab", menuName = "Scriptables/Lighting preset", order = 1)]
+public class LightingPreset : ScriptableObject
+{
+        public Color[] skies;
 }

@@ -18,7 +18,6 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float turnSpeed = 50f;
     [SerializeField] GameObject obj;
     [SerializeField] AudioClip AttackSound;
-    public int score;
     #endregion
 
     #region UnityEvents
@@ -105,16 +104,17 @@ public class PlayerControls : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StopAllCoroutines();
-            StartCoroutine("SlowPlayer");
+            PlayerControls obj = other.GetComponent<PlayerControls>();
+            StartCoroutine(SlowPlayer(obj));
+            
         }
     }
     #region Couroutines
-    private IEnumerator SlowPlayer()
+    private IEnumerator SlowPlayer(PlayerControls other)
     {
-        moveSpeed /= 2;
-        yield return new WaitForSeconds(2);
-        moveSpeed = normalMoveSpeed;
+        other.moveSpeed /= 2;
+        yield return new WaitForSeconds(4);
+        other.moveSpeed = normalMoveSpeed;
     }
     private IEnumerator PlayCoinCoinSound()
     {

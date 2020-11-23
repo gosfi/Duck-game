@@ -184,21 +184,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e82d6336-ef5b-4ada-867e-ef8a4afd784f
     m_ActionName: PlayerControls/Turn Right[/XInputControllerWindows/leftStick/right]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3978579625617823906}
-        m_MethodName: OnScore
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d3904cd5-cfae-4ca2-92ca-7304eeb65fa2
-    m_ActionName: PlayerControls/Increase score[/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerControls
@@ -220,7 +205,6 @@ MonoBehaviour:
   turnSpeed: 100
   obj: {fileID: 9000304619336126602}
   AttackSound: {fileID: 8300000, guid: e4ac0d2566fc58a48abb709d3cb3c643, type: 3}
-  score: 0
 --- !u!54 &3978579625617823908
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -358,7 +342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9000304619336126602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.078}
+  m_LocalPosition: {x: 0, y: 0, z: 0.928}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3978579625617823909}
@@ -375,5 +359,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5935912
+  m_Center: {x: 0, y: 0.09359123, z: 0}
