@@ -36,14 +36,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
-                },
-                {
-                    "name": "Increase score",
-                    "type": "Button",
-                    "id": "d3904cd5-cfae-4ca2-92ca-7304eeb65fa2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -176,17 +168,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Turn Right",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6f3b094b-9ab8-4365-a74c-1851f55c0600",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Increase score",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
