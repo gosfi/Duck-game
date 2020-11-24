@@ -12,7 +12,7 @@ public class PlayerControls : MonoBehaviour
     [Header("hidden variable")]
     Vector2 i_movement;
     AudioSource source;
-    bool turningLeft, turningRight, isSoundPlaying, canAttack;
+    bool turningLeft, turningRight, isSoundPlaying, canAttack, isGameStarted;
     [Header("Variable showing in the inspector")]
     [SerializeField] float moveSpeed = normalMoveSpeed;
     [SerializeField] float turnSpeed = 50f;
@@ -55,17 +55,20 @@ public class PlayerControls : MonoBehaviour
     }
     void Update()
     {
-        //always updating
-        Move();
-        Attack();
-        //can't turn left and right at the same time
-        if (turningLeft)
+        if (isGameStarted)
         {
-            TurnLeft();
-        }
-        else if (turningRight)
-        {
-            TurnRight();
+            //always updating
+            Move();
+            Attack();
+            //can't turn left and right at the same time
+            if (turningLeft)
+            {
+                TurnLeft();
+            }
+            else if (turningRight)
+            {
+                TurnRight();
+            }
         }
     }
 
@@ -106,7 +109,7 @@ public class PlayerControls : MonoBehaviour
         {
             PlayerControls obj = other.GetComponent<PlayerControls>();
             StartCoroutine(SlowPlayer(obj));
-            
+
         }
     }
     #region Couroutines
