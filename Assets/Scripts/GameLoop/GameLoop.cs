@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class GameLoop : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class GameLoop : MonoBehaviour
 
     public Text timerText;
     public float startTimer;
+
+    public Score score;
+
     public Patrol[] patrol;
 
     private bool startTimerBool;
@@ -20,7 +24,7 @@ public class GameLoop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         startTimer = START_TIMER;
         startTimerBool = true;
         timerText.text = startTimer.ToString();
@@ -32,15 +36,18 @@ public class GameLoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
         if (startTimerBool)
         {
             startTimer -= Time.deltaTime;
             timerText.text = Mathf.Round(startTimer).ToString();
         }
-        
 
-        if(startTimer <= 0)
+
+        if (startTimer <= 0)
         {
+
             startTimerBool = false;
             timerText.text = " ";
             startTimer = 0;
@@ -50,11 +57,11 @@ public class GameLoop : MonoBehaviour
 
             for (int i = 0; i < patrol.Length; i++)
             {
-            patrol[i].start = true;
+                patrol[i].start = true;
             }
         }
 
-        if(gameTimer <= 0)
+        if (gameTimer <= 0)
         {
 
             gameTimerText.text = " ";
@@ -63,6 +70,7 @@ public class GameLoop : MonoBehaviour
             {
                 patrol[i].start = false;
             }
+            score.startScore = true;
         }
     }
 }

@@ -16,7 +16,7 @@ public class PlayerControls : MonoBehaviour
 
 
     [Header("Variable showing in the inspector")]
-    public bool isGameStarted = true;
+    public bool isGameStarted = false;
     [SerializeField] float moveSpeed = normalMoveSpeed;
     [SerializeField] float turnSpeed = 50f;
     [SerializeField] GameObject obj;
@@ -50,11 +50,12 @@ public class PlayerControls : MonoBehaviour
     private void Awake()
     {
         source = GetComponent<AudioSource>();
+
     }
 
     private void OnEnable()
     {
-        transform.position = new Vector3(0, 0.75f, 0);
+        transform.position = new Vector3(0 , 0.5f, 0);
     }
     void Update()
     {
