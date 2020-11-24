@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
+    public bool start = false;
+
     public Transform[] waypoints;
     public int speed;
 
@@ -19,12 +21,15 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
-        if (distance < 1)
+        if (start)
         {
-            IncreaseIndex();
+            distance = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
+            if (distance < 1)
+            {
+                IncreaseIndex();
+            }
+            Patrolling();
         }
-        Patrolling();
     }
 
     void Patrolling()
