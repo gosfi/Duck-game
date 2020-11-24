@@ -247,6 +247,7 @@ MonoBehaviour:
   scoreP1: {fileID: 1463377492}
   scoreP2: {fileID: 2090156938}
   Panel: {fileID: 595076832}
+  menu: {fileID: 283286860}
 --- !u!4 &91239324
 Transform:
   m_ObjectHideFlags: 0
@@ -869,7 +870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &283286861
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1848,7 +1849,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &637499797
 GameObject:
@@ -2803,7 +2804,7 @@ PrefabInstance:
     - target: {fileID: 3003635724519980125, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3003635724519980125, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
         type: 3}
@@ -2872,7 +2873,7 @@ PrefabInstance:
     - target: {fileID: 6444445139707192014, guid: 0ac96b71a086d9e498e00b4b6ada6865,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6444445139707192014, guid: 0ac96b71a086d9e498e00b4b6ada6865,
         type: 3}
@@ -3341,7 +3342,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!1 &1489366377
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,7 +4255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!222 &2090156939
 CanvasRenderer:
   m_ObjectHideFlags: 0

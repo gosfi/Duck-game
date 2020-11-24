@@ -18,6 +18,7 @@ public class Score : MonoBehaviour
     public Text scoreP1;
     public Text scoreP2;
     public Transform Panel;
+    public GameObject menu;
 
     const float YPOS = 300;
     const float TIMERPANEL = 0;
@@ -26,7 +27,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         pointP1 = 30;
-        pointP2 = 300;
+        pointP2 = 90;
         panelCpt = Panel.transform.position;
     }
 
@@ -79,7 +80,11 @@ public class Score : MonoBehaviour
                 }
                 timer = 0.1f;
             }
-
+            if(pointP1 == pointP1cpt && pointP2 == pointP2cpt)
+            {
+                menu.SetActive(true);
+            }
         }
+        
     }
 }
