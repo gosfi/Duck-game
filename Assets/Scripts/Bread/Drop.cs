@@ -5,7 +5,7 @@ using UnityEngine;
 public class Drop : MonoBehaviour
 {
     public Patrol patrol;
-    BoxCollider collider;
+    BoxCollider _collider;
     public Transform npc;
 
     public float dropFowardForce;
@@ -41,7 +41,7 @@ public class Drop : MonoBehaviour
         {
             currentBread.transform.parent = null;
             currentBread.SetActive(true);
-            collider.isTrigger = false;
+            _collider.isTrigger = false;
             rb.isKinematic = false;
 
             rb.AddForce(-npc.right * dropFowardForce, ForceMode.Impulse);
@@ -62,8 +62,8 @@ public class Drop : MonoBehaviour
     {
         currentBread = Instantiate(breadPrefab, npc.transform.position, npc.transform.rotation);
         currentBread.transform.parent = npc;
-        collider = currentBread.GetComponent<BoxCollider>();
-        collider.isTrigger = true;
+        _collider = currentBread.GetComponent<BoxCollider>();
+        _collider.isTrigger = true;
         rb = currentBread.GetComponent<Rigidbody>();
         rb.isKinematic = true;
 

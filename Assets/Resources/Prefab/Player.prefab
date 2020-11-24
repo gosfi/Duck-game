@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3978579625617823906}
   - component: {fileID: 3978579625617823908}
   - component: {fileID: 6554484924806712245}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7c530a370ee0a4e9962e507e7ea9a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameStarted: 1
   moveSpeed: 10
   turnSpeed: 100
   obj: {fileID: 9000304619336126602}
@@ -327,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5365132081460499463}
   - component: {fileID: 2077926330270612551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: attack trigger
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
