@@ -7,7 +7,8 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     int scoreP1, scorep2;
-    public TextMeshProUGUI p1Text, p2Text;
+    public TextMeshProUGUI p1Text, p2Text, winningText;
+    
 
     private void Start()
     {
@@ -26,6 +27,17 @@ public class GameController : MonoBehaviour
 
     public void EndGame()
     {
+        if(scoreP1 > scorep2)
+        {
 
+        }
+        else if(scorep2 > scoreP1)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 }

@@ -63,6 +63,7 @@ public class CameraControl : MonoBehaviour
         Vector3 centerPoint = GetCenterPoint();
         Vector3 newPos = centerPoint + offset;
         transform.position = Vector3.SmoothDamp(transform.position, newPos, ref velocity, smoothTime);
+        transform.LookAt(centerPoint);
     }
 
     private Vector3 GetCenterPoint()
