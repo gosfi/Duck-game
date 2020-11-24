@@ -6,22 +6,35 @@ using UnityEngine.UI;
 public class GameLoop : MonoBehaviour
 {
     public Text timerText;
-    public float timer = 60;
+    public float startTimer = 60;
     public Patrol[] patrol;
+
+    private bool startTimerBool;
+
     // Start is called before the first frame update
     void Start()
     {
-        timerText.text = timer.ToString();
+        startTimerBool = true;
+        timerText.text = startTimer.ToString();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        timerText.text = Mathf.Round(timer).ToString();
-
-        if(timer <= 0)
+        if (startTimerBool)
         {
+            startTimer -= Time.deltaTime;
+            timerText.text = Mathf.Round(startTimer).ToString();
+        }
+        
+
+        if(startTimer <= 0)
+        {
+            startTimerBool = false;
+            timerText.text = "0";
+            startTimer = 60;
+
             for(int i = 0; i < patrol.Length; i++)
             {
             patrol[i].start = true;
