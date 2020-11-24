@@ -12,8 +12,11 @@ public class PlayerControls : MonoBehaviour
     [Header("hidden variable")]
     Vector2 i_movement;
     AudioSource source;
-    bool turningLeft, turningRight, isSoundPlaying, canAttack, isGameStarted;
+    bool turningLeft, turningRight, isSoundPlaying, canAttack;
+
+
     [Header("Variable showing in the inspector")]
+    public bool isGameStarted = true;
     [SerializeField] float moveSpeed = normalMoveSpeed;
     [SerializeField] float turnSpeed = 50f;
     [SerializeField] GameObject obj;
