@@ -9,41 +9,25 @@ public class PlayerControls : MonoBehaviour
     #region Variables
     [Header("constant variables")]
     const float normalMoveSpeed = 10f;
-    [Header("hidden variable")]
-    Vector2 i_movement;
+
+    [HideInInspector]
+    public Vector2 i_movement;
     AudioSource source;
-    bool turningLeft, turningRight, isSoundPlaying, canAttack;
+    [HideInInspector]
+    public bool turningLeft, turningRight, isSoundPlaying, canAttack;
 
 
     [Header("Variable showing in the inspector")]
     public bool isGameStarted = false;
     [SerializeField] float moveSpeed = normalMoveSpeed;
     [SerializeField] float turnSpeed = 50f;
+
+    [SerializeField] int playerIndex;
     [SerializeField] GameObject obj;
     [SerializeField] AudioClip AttackSound;
     #endregion
 
-    #region UnityEvents
-    public void OnMove(CallbackContext context)
-    {
-        i_movement.y = context.ReadValue<float>();
-    }
 
-    public void OnTurnLeft(CallbackContext context)
-    {
-        turningLeft = context.action.triggered;
-    }
-
-    public void OnTurnRight(CallbackContext context)
-    {
-        turningRight = context.action.triggered;
-    }
-
-    public void OnAttack(CallbackContext context)
-    {
-        canAttack = context.action.triggered;
-    }
-    #endregion
 
     #region GameLogic
 
@@ -53,9 +37,14 @@ public class PlayerControls : MonoBehaviour
 
     }
 
+    public int GetPlayerIndex()
+    {
+        return playerIndex;
+    }
+
     private void OnEnable()
     {
-        transform.position = new Vector3(0 , 0.5f, 0);
+        transform.position = new Vector3(0, 0.5f, 0);
     }
     void Update()
     {

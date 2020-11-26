@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Camera
   - Light
+  - Player 2
   layers:
   - Default
   - TransparentFX
