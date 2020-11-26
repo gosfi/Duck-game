@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayerTest.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
-    path: Assets/Scenes/Waypoint.unity
-    guid: 792c391bb0a08054d9e0352f987381a4
+    path: Assets/Scenes/GameScene.unity
+    guid: 3ccef06346fe36243866d7b78b5dbaab
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 10fdd1ddb3dc1e94a9b55952a0d19a21,
       type: 2}

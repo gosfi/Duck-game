@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     int scoreP1, scorep2;
     public TextMeshProUGUI p1Text, p2Text, winningText;
+    
 
     private void Start()
     {
