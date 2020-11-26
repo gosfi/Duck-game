@@ -41,7 +41,6 @@ public class PlayerControls : MonoBehaviour
     {
         return playerIndex;
     }
-    
     void Update()
     {
         if (isGameStarted)
@@ -104,7 +103,7 @@ public class PlayerControls : MonoBehaviour
     #region Couroutines
     private IEnumerator SlowPlayer(PlayerControls other)
     {
-        other.moveSpeed /= 2;
+        other.moveSpeed  = 5f;
         yield return new WaitForSeconds(4);
         other.moveSpeed = normalMoveSpeed;
     }
