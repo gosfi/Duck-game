@@ -2579,7 +2579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1252358261
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2766,6 +2766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 3003635724519980113, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3003635724519980125, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2804,7 +2809,9 @@ PrefabInstance:
     - target: {fileID: 3003635724519980125, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      
+      value: 14
+
       objectReference: {fileID: 0}
     - target: {fileID: 3003635724519980125, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
         type: 3}
@@ -2873,7 +2880,9 @@ PrefabInstance:
     - target: {fileID: 6444445139707192014, guid: 0ac96b71a086d9e498e00b4b6ada6865,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+
+      value: 12
+
       objectReference: {fileID: 0}
     - target: {fileID: 6444445139707192014, guid: 0ac96b71a086d9e498e00b4b6ada6865,
         type: 3}
