@@ -17,24 +17,28 @@ public class GameLoop : MonoBehaviour
     public Patrol[] patrol;
 
     private bool startTimerBool;
-    private bool whistleStop;
-    private bool start3;
-    private bool start2;
-    private bool start1;
+    private bool whistleStop = false;
+    private bool start3 = true;
+    private bool start2 = true;
+    private bool start1 = true;
+    private bool gameMusic = true;
+    private bool endGame = true;
 
     const float START_TIMER = 3;
     const float GAME_TIMER = 5;
 
-    private AudioClip duckSound, whistleSound;
-    private AudioSource audioSrc;
+    private AudioClip duckSound, whistleSound, parkSound;
+    public AudioSource audioSrcGame;
+    public AudioSource audioSrcPark;
 
     // Start is called before the first frame update
     void Start()
     {
         duckSound = Resources.Load<AudioClip>("Sound/DuckSound");
         whistleSound = Resources.Load<AudioClip>("Sound/WhistleSound");
+        parkSound = Resources.Load<AudioClip>("Sound/Park");
 
-        audioSrc = GetComponent<AudioSource>();
+        audioSrcGame = GetComponent<AudioSource>();
 
         startTimer = START_TIMER;
         startTimerBool = true;
@@ -42,10 +46,7 @@ public class GameLoop : MonoBehaviour
 
         gameTimer = GAME_TIMER;
 
-        whistleStop = false;
-        start3 = true;
-        start2 = true;
-        start1 = true;
+
 
     }
 
@@ -62,19 +63,17 @@ public class GameLoop : MonoBehaviour
 
         if (timerText.text == "3" && start3)
         {
-            // PlaySound("Stop");
+
             PlaySound("Start");
             start3 = false;
         }
         if (timerText.text == "2" && start2)
         {
-            // PlaySound("Stop");
             PlaySound("Start");
             start2 = false;
         }
         if (timerText.text == "1" && start1)
         {
-            // PlaySound("Stop");
             PlaySound("Start");
             start1 = false;
         }
@@ -86,18 +85,22 @@ public class GameLoop : MonoBehaviour
 
         if (timerText.text == "GO" && !whistleStop)
         {
-           // PlaySound("Stop");
+            // PlaySound("Stop");
             PlaySound("Whistle");
             whistleStop = true;
         }
 
         if (startTimer <= 0)
         {
-           // PlaySound("Stop");
+            // PlaySound("Stop");
             startTimerBool = false;
             timerText.text = " ";
             startTimer = 0;
-
+            if (gameMusic)
+            {
+                PlaySound("Park");
+                gameMusic = false;
+            }
             gameTimer -= Time.deltaTime;
             gameTimerText.text = Mathf.Round(gameTimer).ToString();
 
@@ -109,7 +112,12 @@ public class GameLoop : MonoBehaviour
 
         if (gameTimer <= 0)
         {
-
+            PlaySound("StopPark");
+            if (endGame)
+            {
+                PlaySound("Whistle");
+                endGame = false;
+            }
             gameTimerText.text = " ";
             gameTimer = 0;
             for (int i = 0; i < patrol.Length; i++)
@@ -120,18 +128,24 @@ public class GameLoop : MonoBehaviour
         }
     }
 
-    void PlaySound(string clip)
+    public void PlaySound(string clip)
     {
         switch (clip)
         {
             case "Start":
-                audioSrc.PlayOneShot(duckSound);
+                audioSrcGame.PlayOneShot(duckSound);
                 break;
             case "Whistle":
-                audioSrc.PlayOneShot(whistleSound);
+                audioSrcGame.PlayOneShot(whistleSound);
                 break;
-            case "Stop":
-                audioSrc.Stop();
+            case "Park":
+                audioSrcPark.PlayOneShot(parkSound);
+                break;
+            case "StopGame":
+                audioSrcGame.Stop();
+                break;
+            case "StopPark":
+                audioSrcPark.Stop();
                 break;
         }
     }

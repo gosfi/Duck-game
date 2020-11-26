@@ -19,6 +19,7 @@ public class Score : MonoBehaviour
     public Text scoreP2;
     public Transform Panel;
     public GameObject menu;
+    public GameLoop loop;
 
     const float YPOS = 300;
     const float TIMERPANEL = 0;
@@ -68,23 +69,27 @@ public class Score : MonoBehaviour
                     {
                         scoreP1.fontSize++;
                     }
+                    loop.PlaySound("Start");
                 }
                 if (pointP2cpt != pointP2)
                 {
+
                     pointP2cpt++;
                     scoreP2.text = pointP2cpt.ToString();
                     if (scoreP2.fontSize != 160)
                     {
                         scoreP2.fontSize++;
                     }
+                    loop.PlaySound("Start");
                 }
+
                 timer = 0.1f;
             }
-            if(pointP1 == pointP1cpt && pointP2 == pointP2cpt)
+            if (pointP1 == pointP1cpt && pointP2 == pointP2cpt)
             {
                 menu.SetActive(true);
             }
         }
-        
+
     }
 }
