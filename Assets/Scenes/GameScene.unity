@@ -1702,6 +1702,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6444445139707192015, guid: 0ac96b71a086d9e498e00b4b6ada6865,
+        type: 3}
+      propertyPath: m_JoinBehavior
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ac96b71a086d9e498e00b4b6ada6865, type: 3}
 --- !u!4 &325148072 stripped
@@ -6808,6 +6813,7 @@ GameObject:
   - component: {fileID: 1176236305}
   - component: {fileID: 1176236304}
   - component: {fileID: 1176236303}
+  - component: {fileID: 1176236302}
   m_Layer: 0
   m_Name: Pond
   m_TagString: Untagged
@@ -6815,6 +6821,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1176236302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176236301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2.133631, z: 1.0000002}
+  m_Center: {x: 0.000000076293944, y: 0.066815495, z: -0.000000076293944}
 --- !u!23 &1176236303
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9622,26 +9641,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 3003635724519980115, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
-        type: 3}
-      propertyPath: offset.z
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3003635724519980115, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
-        type: 3}
-      propertyPath: smoothTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3003635724519980115, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
-        type: 3}
-      propertyPath: offset.x
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3003635724519980115, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
-        type: 3}
-      propertyPath: offset.y
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3003635724519980125, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
         type: 3}

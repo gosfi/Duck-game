@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 965406090606046338}
   - component: {fileID: 965406090606046341}
   - component: {fileID: 965406090606046336}
-  m_Layer: 0
+  - component: {fileID: -3840009879188368226}
+  m_Layer: 11
   m_Name: Bread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +107,19 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &-3840009879188368226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965406090606046343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63e163d6bc40214d93e90951d84a598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

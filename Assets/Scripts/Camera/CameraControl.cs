@@ -6,7 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraControl : MonoBehaviour
 {
-    private PlayerControls[] players;
+    [HideInInspector]
+    public PlayerControls[] players;
     private Vector3 velocity;
 
     private Camera _camera;
