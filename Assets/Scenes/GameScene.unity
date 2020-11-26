@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -9622,26 +9622,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 3003635724519980115, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
-        type: 3}
-      propertyPath: offset.z
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3003635724519980115, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
-        type: 3}
-      propertyPath: smoothTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3003635724519980115, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
-        type: 3}
-      propertyPath: offset.x
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3003635724519980115, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
-        type: 3}
-      propertyPath: offset.y
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3003635724519980125, guid: ac57a11e19c73ad4e8d1d58e6c0d1dc2,
         type: 3}
