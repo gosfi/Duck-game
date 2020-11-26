@@ -41,11 +41,7 @@ public class PlayerControls : MonoBehaviour
     {
         return playerIndex;
     }
-
-    private void OnEnable()
-    {
-        transform.position = new Vector3(0, 0.5f, 0);
-    }
+    
     void Update()
     {
         if (isGameStarted)
