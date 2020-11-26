@@ -17,6 +17,10 @@ public class GameLoop : MonoBehaviour
     public Patrol[] patrol;
 
     private bool startTimerBool;
+    private bool whistleStop;
+    private bool start3;
+    private bool start2;
+    private bool start1;
 
     const float START_TIMER = 3;
     const float GAME_TIMER = 5;
@@ -38,6 +42,11 @@ public class GameLoop : MonoBehaviour
 
         gameTimer = GAME_TIMER;
 
+        whistleStop = false;
+        start3 = true;
+        start2 = true;
+        start1 = true;
+
     }
 
     // Update is called once per frame
@@ -50,23 +59,41 @@ public class GameLoop : MonoBehaviour
             startTimer -= Time.deltaTime;
             timerText.text = Mathf.Round(startTimer).ToString();
         }
-       
 
+        if (timerText.text == "3" && start3)
+        {
+            // PlaySound("Stop");
+            PlaySound("Start");
+            start3 = false;
+        }
+        if (timerText.text == "2" && start2)
+        {
+            // PlaySound("Stop");
+            PlaySound("Start");
+            start2 = false;
+        }
+        if (timerText.text == "1" && start1)
+        {
+            // PlaySound("Stop");
+            PlaySound("Start");
+            start1 = false;
+        }
 
         if (startTimer < 0.8f)
         {
             timerText.text = "GO";
         }
 
-        if (timerText.text == "GO")
+        if (timerText.text == "GO" && !whistleStop)
         {
            // PlaySound("Stop");
             PlaySound("Whistle");
+            whistleStop = true;
         }
 
         if (startTimer <= 0)
         {
-            PlaySound("Stop");
+           // PlaySound("Stop");
             startTimerBool = false;
             timerText.text = " ";
             startTimer = 0;
