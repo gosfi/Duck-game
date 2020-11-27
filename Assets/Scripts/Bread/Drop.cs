@@ -27,8 +27,8 @@ public class Drop : MonoBehaviour
     void Start()
     {
         Spawn();
-        dropFowardForce = Random.Range(2f, 7f);
-        dropUpwardForce = Random.Range(2f, 7f);
+        dropFowardForce = Random.Range(5f, 8f);
+        dropUpwardForce = Random.Range(5f, 8f);
         dropPoint = (int)Random.Range(2f, 12f);
 
     }
