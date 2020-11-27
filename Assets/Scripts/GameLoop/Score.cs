@@ -21,7 +21,7 @@ public class Score : MonoBehaviour
     public GameObject menu;
     public GameLoop loop;
 
-    const float YPOS = 300;
+    const float YPOS = 500;
     const float TIMERPANEL = 0;
 
     // Start is called before the first frame update
@@ -42,7 +42,7 @@ public class Score : MonoBehaviour
             {
                 if (Panel.transform.position.y != YPOS)
                 {
-                    panelCpt.y++;
+                    panelCpt.y += 5;
                     Panel.transform.position = panelCpt;
                 }
                 if (Panel.transform.position.y >= YPOS)

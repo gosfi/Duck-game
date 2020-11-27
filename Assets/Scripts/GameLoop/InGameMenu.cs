@@ -7,7 +7,8 @@ public class InGameMenu : MonoBehaviour
 {
     public void Retry()
     {
-        SceneManager.LoadScene("Waypoint");
+       
+        SceneManager.LoadScene("GameScene");
     }
 
     public void QuitGame()
