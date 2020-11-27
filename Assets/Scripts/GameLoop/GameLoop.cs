@@ -16,6 +16,12 @@ public class GameLoop : MonoBehaviour
 
     public Patrol[] patrol;
 
+    public GameObject camera1;
+    public GameObject camera2;
+
+    private AudioListener camera1Audio;
+    private AudioListener camera2Audio;
+
     private bool startTimerBool;
     private bool whistleStop = false;
     private bool start3 = true;
@@ -25,7 +31,7 @@ public class GameLoop : MonoBehaviour
     private bool endGame = true;
 
     const float START_TIMER = 3;
-    const float GAME_TIMER = 30;
+    const float GAME_TIMER = 120;
 
     private AudioClip duckSound, whistleSound, parkSound;
     public AudioSource audioSrcGame;
@@ -46,6 +52,13 @@ public class GameLoop : MonoBehaviour
 
         gameTimer = GAME_TIMER;
 
+        camera1Audio = camera1.GetComponent<AudioListener>();
+        camera2Audio = camera2.GetComponent<AudioListener>();
+
+        camera1.SetActive(true);
+        camera1Audio.enabled = true;
+        camera2.SetActive(false);
+        camera2Audio.enabled = false;
 
 
     }
@@ -92,6 +105,10 @@ public class GameLoop : MonoBehaviour
 
         if (startTimer <= 0)
         {
+            camera1.SetActive(false);
+            camera1Audio.enabled = false;
+            camera2.SetActive(true);
+            camera2Audio.enabled = true;
             // PlaySound("Stop");
             startTimerBool = false;
             timerText.text = " ";
@@ -112,6 +129,10 @@ public class GameLoop : MonoBehaviour
 
         if (gameTimer <= 0)
         {
+            camera1.SetActive(true);
+            camera1Audio.enabled = true;
+            camera2.SetActive(false);
+            camera2Audio.enabled = false;
             PlaySound("StopPark");
             if (endGame)
             {
@@ -149,4 +170,5 @@ public class GameLoop : MonoBehaviour
                 break;
         }
     }
+    
 }
