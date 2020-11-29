@@ -8,6 +8,7 @@ public class Score : MonoBehaviour
     private bool showScore = false;
     private float timer = 0.01f;
     private float timer2 = 5f;
+    private float timer3 = 5f;
     private float timerPanel = 0;
     private float pointP1cpt = 0;
     private float pointP2cpt = 0;
@@ -93,21 +94,26 @@ public class Score : MonoBehaviour
 
             if (pointP1 == pointP1cpt && pointP2 == pointP2cpt)
             {
-                scoreView.SetActive(false);
-                if (pointP1 > pointP2)
+                timer3 -= Time.deltaTime;
+
+                if (timer3 <= 0)
                 {
-                    win1.SetActive(true);
-                    timer2 -= Time.deltaTime;
-                }
-                else if (pointP2 > pointP1)
-                {
-                    win2.SetActive(true);
-                    timer2 -= Time.deltaTime;
-                }
-                else if (pointP1 == pointP2)
-                {
-                    tie.SetActive(true);
-                    timer2 -= Time.deltaTime;
+                    scoreView.SetActive(false);
+                    if (pointP1 > pointP2)
+                    {
+                        win1.SetActive(true);
+                        timer2 -= Time.deltaTime;
+                    }
+                    else if (pointP2 > pointP1)
+                    {
+                        win2.SetActive(true);
+                        timer2 -= Time.deltaTime;
+                    }
+                    else if (pointP1 == pointP2)
+                    {
+                        tie.SetActive(true);
+                        timer2 -= Time.deltaTime;
+                    }
                 }
 
                 if (timer2 <= 0)
