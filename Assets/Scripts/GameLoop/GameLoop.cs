@@ -37,6 +37,9 @@ public class GameLoop : MonoBehaviour
     public AudioSource audioSrcGame;
     public AudioSource audioSrcPark;
 
+    public PlayerControls player1;
+    public PlayerControls player2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -113,6 +116,9 @@ public class GameLoop : MonoBehaviour
             startTimerBool = false;
             timerText.text = " ";
             startTimer = 0;
+            player1.isGameStarted = true;
+            player2.isGameStarted = true;
+
             if (gameMusic)
             {
                 PlaySound("Park");
@@ -134,6 +140,9 @@ public class GameLoop : MonoBehaviour
             camera2.SetActive(false);
             camera2Audio.enabled = false;
             PlaySound("StopPark");
+            player1.isGameStarted = false;
+            player2.isGameStarted = false;
+
             if (endGame)
             {
                 PlaySound("Whistle");
