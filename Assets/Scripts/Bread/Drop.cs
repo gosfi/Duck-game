@@ -29,7 +29,7 @@ public class Drop : MonoBehaviour
         Spawn();
         dropFowardForce = Random.Range(10f, 12f);
         dropUpwardForce = Random.Range(15f, 20f);
-        dropPoint = (int)Random.Range(2f, 12f);
+        dropPoint = (int)Random.Range(3f, 12f);
 
     }
 
@@ -52,7 +52,7 @@ public class Drop : MonoBehaviour
 
             dropFowardForce = Random.Range(10f, 12f);
             dropUpwardForce = Random.Range(15f, 20f);
-            dropPoint = (int)Random.Range(2f, 12f);
+            dropPoint = (int)Random.Range(3f, 12f);
 
             Spawn();
         }
