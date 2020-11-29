@@ -8,12 +8,12 @@ public class Score : MonoBehaviour
     private bool showScore = false;
     private float timer = 0.01f;
     private float timerPanel = 0;
-    private float pointP1 = 0;
-    private float pointP2 = 0;
     private float pointP1cpt = 0;
     private float pointP2cpt = 0;
     private Vector3 panelCpt;
 
+    public float pointP1;
+    public float pointP2;
     public bool startScore = false;
     public Text scoreP1;
     public Text scoreP2;
@@ -27,8 +27,8 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pointP1 = 30;
-        pointP2 = 90;
+        pointP1 = 0;
+        pointP2 = 0;
         panelCpt = Panel.transform.position;
     }
 

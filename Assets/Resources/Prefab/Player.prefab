@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3d69f6532d14f1048b8219d40306ad1b, type: 3}
-  m_Color: {r: 0.990566, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0.9960785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1528976868699433894}
   m_Layer: 10
   m_Name: Player
-  m_TagString: Player 2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,8 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9370002a8b84949b61a1fc06c57374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerText: 
-  bigText: {fileID: 0}
+  playerText: P2
+  bigText: {fileID: 3627994088480344958}
   _camera: {fileID: 0}
 --- !u!1 &7707862755832180894
 GameObject:
@@ -429,8 +429,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294901760
+  m_fontColor: {r: 0, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -670,6 +670,16 @@ PrefabInstance:
     - target: {fileID: 4134157120610381799, guid: b7582cc3fc196e24dbc8f17e545c1d27,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317909017594643236, guid: b7582cc3fc196e24dbc8f17e545c1d27,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317909017594643236, guid: b7582cc3fc196e24dbc8f17e545c1d27,
+        type: 3}
+      propertyPath: m_Color.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189820614039818671, guid: b7582cc3fc196e24dbc8f17e545c1d27,

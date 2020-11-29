@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 965406090606046338}
   - component: {fileID: 965406090606046341}
   - component: {fileID: 965406090606046336}
+  - component: {fileID: 6465248027834416482}
   m_Layer: 11
   m_Name: Bread
-  m_TagString: Untagged
+  m_TagString: Bread
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,10 +90,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965406090606046343}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.25, y: 1.25, z: 1.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &965406090606046336
 Rigidbody:
@@ -110,3 +111,16 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &6465248027834416482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965406090606046343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f53a962e63ca5e458c8766c9942b90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 6116388542902906870, guid: a8f62e13869ad104e8fb9dd01b673cef, type: 3}
