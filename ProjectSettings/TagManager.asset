@@ -8,6 +8,7 @@ TagManager:
   - Light
   - Player 2
   - Bread
+  - Player 1
   layers:
   - Default
   - TransparentFX
