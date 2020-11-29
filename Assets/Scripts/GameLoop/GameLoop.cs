@@ -8,7 +8,6 @@ public class GameLoop : MonoBehaviour
 {
     public Text gameTimerText;
     public float gameTimer;
-
     public Text timerText;
     public float startTimer;
 

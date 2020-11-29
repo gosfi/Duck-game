@@ -6,43 +6,60 @@ using UnityEngine.SceneManagement;
 public class MenuScripts : MonoBehaviour
 {
     public List<MenuButton> buttons;
+    public bool canUpdateMenu;
     public GameObject Point;
     public int NumberOfButtons;
     private int SelectedButton = 1;
     public List<Transform> buttonPos;
+
+    private void Start()
+    {
+        canUpdateMenu = false;
+    }
     private void OnPlay()
     {
-        if (SelectedButton == 1)
+        if (canUpdateMenu)
         {
-            SceneManager.LoadScene(buttons[0].SceneName);
-        }
-        else if (SelectedButton == 2)
-        {
-            Application.Quit();
+            if (SelectedButton == 1)
+            {
+                SceneManager.LoadScene(buttons[0].SceneName);
+            }
+            else if (SelectedButton == 2)
+            {
+                Application.Quit();
+            }
         }
     }
     private void OnButtonUp()
     {
-        // Checks if the pointer needs to move down or up, in this case the poiter moves up one button
-        if (SelectedButton > 1)
+        if (canUpdateMenu)
         {
-            SelectedButton -= 1;
+            if (SelectedButton > 1)
+            {
+                SelectedButton -= 1;
+            }
+            MoveThePointer();
+            return;
         }
-        MoveThePointer();
-        return;
+        // Checks if the pointer needs to move down or up, in this case the poiter moves up one button
+
     }
     private void OnButtonDown()
     {
-        // Checks if the pointer needs to move down or up, in this case the poiter moves down one button
-        if (SelectedButton < NumberOfButtons)
+        if (canUpdateMenu)
         {
-            SelectedButton += 1;
+            if (SelectedButton < NumberOfButtons)
+            {
+                SelectedButton += 1;
+            }
+            MoveThePointer();
+            return;
         }
-        MoveThePointer();
-        return;
+        // Checks if the pointer needs to move down or up, in this case the poiter moves down one button
+
     }
 
-     private void MoveThePointer()
+    private void MoveThePointer()
     {
         // Moves the pointer
         if (SelectedButton == 1)
