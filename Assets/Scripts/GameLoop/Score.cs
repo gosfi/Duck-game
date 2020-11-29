@@ -26,7 +26,6 @@ public class Score : MonoBehaviour
     public GameObject win2;
     public GameObject tie;
     public GameObject scoreView;
-     public MenuScripts EndGameMenu;
 
     const float YPOS = 500;
     const float TIMERPANEL = 0;
@@ -120,7 +119,6 @@ public class Score : MonoBehaviour
                 if (timer2 <= 0)
                 {
                     menu.SetActive(true);
-                    EndGameMenu.canUpdateMenu = true;
                 }
             }
         }
