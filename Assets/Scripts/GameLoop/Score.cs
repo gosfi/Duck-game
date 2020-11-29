@@ -110,9 +110,9 @@ public class Score : MonoBehaviour
                     timer2 -= Time.deltaTime;
                 }
 
-                if(timer2 <= 0)
+                if (timer2 <= 0)
                 {
-                menu.SetActive(true);
+                    menu.SetActive(true);
                 }
             }
         }
