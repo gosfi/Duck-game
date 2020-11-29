@@ -50,8 +50,8 @@ public class Drop : MonoBehaviour
             float random = Random.Range(-1f, 1f);
             rb.AddTorque(new Vector3(random, random, random));
 
-            dropFowardForce = Random.Range(4f, 7f);
-            dropUpwardForce = Random.Range(4f, 7f);
+            dropFowardForce = Random.Range(10f, 12f);
+            dropUpwardForce = Random.Range(15f, 20f);
             dropPoint = (int)Random.Range(2f, 12f);
 
             Spawn();
