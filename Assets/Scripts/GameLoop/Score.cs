@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
 {
     private bool showScore = false;
     private float timer = 0.01f;
+    private float timer2 = 5f;
     private float timerPanel = 0;
     private float pointP1cpt = 0;
     private float pointP2cpt = 0;
@@ -20,6 +21,10 @@ public class Score : MonoBehaviour
     public Transform Panel;
     public GameObject menu;
     public GameLoop loop;
+    public GameObject win1;
+    public GameObject win2;
+    public GameObject tie;
+    public GameObject scoreView;
 
     const float YPOS = 500;
     const float TIMERPANEL = 0;
@@ -85,9 +90,30 @@ public class Score : MonoBehaviour
 
                 timer = 0.1f;
             }
+
             if (pointP1 == pointP1cpt && pointP2 == pointP2cpt)
             {
+                scoreView.SetActive(false);
+                if (pointP1 > pointP2)
+                {
+                    win1.SetActive(true);
+                    timer2 -= Time.deltaTime;
+                }
+                else if (pointP2 > pointP1)
+                {
+                    win2.SetActive(true);
+                    timer2 -= Time.deltaTime;
+                }
+                else if (pointP1 == pointP2)
+                {
+                    tie.SetActive(true);
+                    timer2 -= Time.deltaTime;
+                }
+
+                if(timer2 <= 0)
+                {
                 menu.SetActive(true);
+                }
             }
         }
 
