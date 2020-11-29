@@ -14015,11 +14015,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7838352674025583469, guid: bcb432c032bd87d44a1b1aac7408bf03,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7838352674904784986, guid: bcb432c032bd87d44a1b1aac7408bf03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14135,35 +14130,8 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1512325997}
-    - target: {fileID: 8676239851278752951, guid: bcb432c032bd87d44a1b1aac7408bf03,
-        type: 3}
-      propertyPath: buttonPos.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8676239851278752951, guid: bcb432c032bd87d44a1b1aac7408bf03,
-        type: 3}
-      propertyPath: buttonPos.Array.data[1]
-      value: 
-      objectReference: {fileID: 1687570982}
-    - target: {fileID: 8676239851278752951, guid: bcb432c032bd87d44a1b1aac7408bf03,
-        type: 3}
-      propertyPath: buttonPos.Array.data[0]
-      value: 
-      objectReference: {fileID: 1687570983}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb432c032bd87d44a1b1aac7408bf03, type: 3}
---- !u!224 &1687570982 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8981839980706696240, guid: bcb432c032bd87d44a1b1aac7408bf03,
-    type: 3}
-  m_PrefabInstance: {fileID: 1687570981}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1687570983 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6820783941077978845, guid: bcb432c032bd87d44a1b1aac7408bf03,
-    type: 3}
-  m_PrefabInstance: {fileID: 1687570981}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1699682473
 PrefabInstance:
   m_ObjectHideFlags: 0
