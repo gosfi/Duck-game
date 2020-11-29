@@ -31,7 +31,7 @@ public class GameLoop : MonoBehaviour
     private bool endGame = true;
 
     const float START_TIMER = 3;
-    const float GAME_TIMER = 45;
+    const float GAME_TIMER = 120;
 
     private AudioClip duckSound, whistleSound, parkSound;
     public AudioSource audioSrcGame;
