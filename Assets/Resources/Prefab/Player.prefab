@@ -546,6 +546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DuckWhite
       objectReference: {fileID: 0}
+    - target: {fileID: 1522729216997060, guid: 32026357c04e0e944835774b42e3c1b7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4346093141753912, guid: 32026357c04e0e944835774b42e3c1b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -686,6 +690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ring
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189820614039818671, guid: b7582cc3fc196e24dbc8f17e545c1d27,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7582cc3fc196e24dbc8f17e545c1d27, type: 3}

@@ -9,6 +9,7 @@ TagManager:
   - Player 2
   - Bread
   - Player 1
+  - Wall
   layers:
   - Default
   - TransparentFX
